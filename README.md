@@ -117,14 +117,17 @@ It is also possible to run Node-RED from Docker Desktop.
 
 ## Node-RED
 **Installation of Node-RED Packages**
+
 This can be done by navigating to ``Manage palette``
 Under the ``Install`` tab all the required packages can be found.
 
 **Importing Node-RED**
+
 This can be done by navigating to ``import`` this can also be done with ``Ctrl-i``.
 There you can either paste the JSON flow or Import from File.
 
 **Editing Node-RED**
+
 Once installed and imported. Navigate to; ``local`` and adjust ``count node`` if required.
 
 Select a ``mqqt-node`` and double click the node. Edit the ``mqtt server`` where you are able to connect to your MQTT Cloud Server.
