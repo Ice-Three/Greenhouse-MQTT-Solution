@@ -2,7 +2,7 @@
 
 This is produced as a school project at [Novia University of Applied Sciences](https://www.novia.fi/en/) in Finland as a part of our course on Embedded Systems.
 The goal of this project has been to create an MQTT Solution to manage 3 greenhouses with 1 data aggregator each as well as five data collectors each.
-The focus for this has to make the project easily expandable for multiple usage cases with minimal coding needed to expand the project however needed.
+The project was done with the intent to be easily scalable with minimal coding required to deploy the system.
 While the project is scalable and the code has been made to be scalable. The restraints of this as a school project means the project has only been tested with a singular aggregator and a singular collector.
 
 # Table of Contents
@@ -56,7 +56,8 @@ _Docker is recommended because it is capable of running a container of Node-RED 
 **These packages can be installed through Arduino IDE Library manager.
 
 **Aggregators**
--[Node-Red-node-pi-gpio](https://flows.nodered.org/node/node-red-node-pi-gpio)
+
+- [Node-Red-node-pi-gpio](https://flows.nodered.org/node/node-red-node-pi-gpio)
   - [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)***
   - [@flowfuse/node-red-dashboard-2-ui-led](https://flows.nodered.org/node/@flowfuse/node-red-dashboard-2-ui-led)***
   - [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)****
@@ -64,6 +65,7 @@ _Docker is recommended because it is capable of running a container of Node-RED 
 ***Not necessary for core functionality, but strongly recommended for local debugging.
 
 **Client**
+
 - [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 - [@flowfuse/node-red-dashboard-2-ui-led](https://flows.nodered.org/node/@flowfuse/node-red-dashboard-2-ui-led)
 - [node-red-contrib-whatsapp-link](https://flows.nodered.org/node/node-red-contrib-whatsapp-link)
@@ -76,7 +78,7 @@ _Docker is recommended because it is capable of running a container of Node-RED 
 - Open Code Sketch in Arduino IDE
 - Edit SSID and Password to match the network. Note: The Collector and Aggregator must be on the same network if Portforwarding is not done.
 - Add the IP of the Aggregator as the mqtt_server variable.
-- Adjust Collector ID to match the ID of the Collector.
+- Adjust the Collector ID to define the collector within the system.
 
 **Aggregators**
 - Install RaspberryOS
@@ -128,9 +130,9 @@ There you can either paste the JSON flow or Import from File.
 
 **Editing Node-RED**
 
-Once installed and imported. Navigate to; ``local`` and adjust ``count node`` if required.
+Once installed and imported. Navigate to; ``local`` and adjust ``count`` if required.
 
-Select a ``mqqt-node`` and double click the node. Edit the ``mqtt server`` where you are able to connect to your MQTT Cloud Server.
+Select a ``mqqt`` and double click the node. Edit the ``mqtt server`` where you are able to connect to your MQTT Cloud Server.
 # Usage
 Once everything has been installed and is up and running. Navigate to:
 
